@@ -2,17 +2,19 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   font-family: "Titillium Web", sans-serif;
   background-color: #303841;
 }
+
 .nav-list {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  justify-items: center;
   width: 100%;
 }
+
 #navbar {
   background-image: linear-gradient(to bottom, rgb(233, 108, 108), #445c77);
   height: 10vh;
@@ -21,28 +23,32 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .nav-list li {
   padding: 15px;
 }
+
 a {
   text-decoration: none;
   color: white;
   font-size: 2.1em;
 }
+
 li a:hover {
   border-radius: 5px;
   background-color: green;
 }
+
 img {
   display: block;
   width: 100%;
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
 }
+
 #welcome-section {
   background: url("https://www.irbm.com/wp-content/uploads/iStock-909908830-883x572.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -52,31 +58,31 @@ img {
   justify-content: center;
   box-shadow: 3px 3px 10px rgb(243, 5, 243);
 }
+
 #welcome-section > h2 {
   text-align: center;
-  font-size: 3em;
-  padding-right: 15px;
+  font-size: 2.5em;
+  padding: 15px;
   color: #7cec78;
-  align-items: center;
 }
 
 #welcome-section p {
   font-family: "Dancing Script", cursive;
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   color: rgb(255, 255, 255);
   background: black;
   border-radius: 10px;
   padding: 10px;
 }
+
 #projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
   grid-gap: 15px;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  align-self: center;
   background-color: rgba(56, 53, 53);
 }
 
@@ -85,7 +91,6 @@ img {
   font-size: 2em;
   padding: 20px 0;
   color: white;
-  align-items: center;
 }
 
 .project-title {
@@ -101,6 +106,7 @@ img {
   border-bottom-right-radius: 15%;
   box-shadow: 3px 3px 10px rgb(243, 5, 243);
 }
+
 .link-container {
   display: flex;
   flex-direction: column;
@@ -109,58 +115,73 @@ img {
   border-top: 2px solid red;
   border-bottom: 2px solid red;
 }
+
 #profile-link {
   align-self: center;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
   padding: 15px;
   background: #445c77;
   border-radius: 5px;
 }
+
 .fa-facebook-square {
   text-align: center;
 }
+
 img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   box-shadow: 3px 3px 10px rgb(243, 5, 243);
 }
+
 footer {
   background-image: linear-gradient(to bottom, rgb(233, 108, 108), #445c77);
   font-family: "Dancing Script", cursive;
   padding: 20px;
   font-size: 1.2em;
-  text-align: right;
+  text-align: center;
   color: white;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .nav-list li {
+    padding: 10px;
+  }
+
+  #welcome-section > h2 {
+    font-size: 2.5em;
+    padding: 10px;
+  }
+
+  #welcome-section p {
+    font-size: 1.8em;
+    padding: 5px;
+  }
+
   #projects {
-    display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    justify-content: center;
-    align-items: center;
+    padding: 20px;
   }
-  nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 10px;
+
+  .project-title {
+    font-size: 1.2em;
   }
-  #welcome-section {
-    height: 100vh;
+
+  .project-image {
     width: 100%;
-    background: url("https://www.irbm.com/wp-content/uploads/iStock-909908830-883x572.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 200px;
+  }
+
+  footer {
+    font-size: 1em;
+    padding: 10px;
   }
 }
